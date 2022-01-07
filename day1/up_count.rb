@@ -1,20 +1,17 @@
+# frozen_string_literal: true
 
-# a function that returns the number of times a number is increased
+# a method that returns the number of times a number is increased
 # you will be givin input from `input.txt`
 
-file = File.open('input_p1.txt')
+file = File.open('input.txt')
 input = file.read
 prev = input.split.first.to_i
 
 count = 0
 input.each_line do |line|
-  num = line.strip.to_i
-
-  if num > prev
-    count += 1
-    puts count
-  end
-
+  num = line.to_i
+  num > prev ? count += 1 : 'Merry Ambiguous Holiday'
   prev = num
 end
-p count
+
+puts "#{count} times increased"
