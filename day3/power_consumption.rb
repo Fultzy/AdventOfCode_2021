@@ -1,4 +1,3 @@
-# frozen_string_literal: true
 
 input = []
 file = File.open('input.txt')
